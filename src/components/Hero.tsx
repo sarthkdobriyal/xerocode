@@ -1,7 +1,9 @@
+'use client'
 import Image from 'next/image'
 import { FC } from 'react'
 import WaitlistInput from './WaitlistInput'
-
+import { itemScale, itemFade, itemSlide } from '@/variants/textVariants'
+import { motion } from 'framer-motion'
 interface HeroProps {
   
 }
@@ -9,23 +11,24 @@ interface HeroProps {
 const Hero: FC<HeroProps> = ({}) => {
   return <div className='flex flex-col p-5 text-center gap-8 items-center  h-full'>
 
-    <span className='purple_gradient font-open tracking-wider text-4xl bg-clip-text text-transparent'>Integrate AI Throughout Your Workflow</span>
+    <motion.span variants={itemFade} initial='hidden' whileInView='visible' className='purple_gradient font-open tracking-wider text-4xl bg-clip-text text-transparent'>Integrate AI Throughout Your Workflow</motion.span>
   
-     <span className='text-white font-abeezee text-5xl tracking-wider font-normal'>Code Doctor</span>
-     <span className='font-open text-sm text-center w-[34%] '>Make processes where AI collaborates with your team throughout the whole development process.</span>
+     <motion.span variants={itemScale} initial='hidden' whileInView='visible' className='text-white font-abeezee text-5xl tracking-wider font-normal'>Code Doctor</motion.span>
+     <motion.span variants={itemFade} initial='hidden' whileInView='visible' className='font-open text-sm text-center w-[34%] '>Make processes where AI collaborates with your team throughout the whole development process.</motion.span>
 
-     {/* <div className='p-0.5 purple_gradient rounded-full flex mt-5 w-[25%]' >
-        <input type="email" placeholder='Your Email' className=' overflow-hidden border-none outline-none text-sm font-space px-6 rounded-full py-3  h-full w-full bg-black text-slate-200 placeholder:text-gray-700 placeholder:font-extralight pr-24 ' />
-        <button className='rounded-full text-xs px-3 my-1 -ml-[29%]
-        border border-white bg-transparent hover:bg-slate-900'>Join Waitlist</button>
-     </div> */}
 
       <WaitlistInput />
       
      {/* image */}
-     <div className='w-full  relative flex justify-center py-1 my-1'>
-      <div className='z-1 border absolute top-40 left-24  rounded-full bg-[#8593e8] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></div>
-      <div className='z-1 border absolute top-40 right-24 rounded-full bg-[#fc4ff6] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></div>
+     <div   className='w-full  relative flex justify-center py-1 my-1'>
+      <motion.div variant={itemScale} initial='hidden'  whileinView='visible' className='z-1 border absolute top-40 left-24  rounded-full bg-[#8593e8] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></motion.div>
+      <motion.div variant={itemScale} initial='hidden'  whileinView='visible' className='z-1 border absolute top-40 right-24 rounded-full bg-[#fc4ff6] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></motion.div>
+
+        <motion.div 
+          animate={{y: [-10, 20, -10]}}
+          transition={{duration: 2, repeat:'infinity', repeatType: 'reverse', ease: 'easeInOut' }}
+          className='w-full flex justify-center'
+        >
 
         <Image
           src='/images/hero.png'
@@ -34,6 +37,7 @@ const Hero: FC<HeroProps> = ({}) => {
           width={1200}
           height={1000}
           />
+          </motion.div>
      </div>
 
 

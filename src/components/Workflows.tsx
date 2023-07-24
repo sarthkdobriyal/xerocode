@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import WorkflowsCard from './WorkflowsCard'
+import { motion } from 'framer-motion'
 
 interface WorkflowsProps {
   
@@ -25,7 +26,7 @@ const comingSoonData = [{
 const Workflows: FC<WorkflowsProps> = ({}) => {
   return <div className='h-screen w-full '>
     <div className='text-center w-full  bg-gradient-to-r from-[#4E4BE4] to-[#E862FE] text-3xl tracking-widest py-5 bg-clip-text text-transparent font-bold'>Use AI to handle workflows in your chat platforms.</div>
-  <div className='w-full flex flex-wrap justify-center gap-10 my-10'>
+  <div  className='w-full flex flex-wrap justify-center gap-10 my-10'>
       {
         comingSoonData.map((data) => (
           <WorkflowsCard 

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { motion } from 'framer-motion'
+import { itemFade, itemSLide } from '@/variants/textVariants'
+import { visitFunctionBody } from 'typescript'
 
 interface HeaderProps {
   
@@ -11,11 +13,22 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({}) => {
   return <motion.div 
             
-  initial={{  opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.2 }}
+  initial={{  x: -100, opacity: 0 }}
+  animate={{x: 0, opacity: 1 }}
+  transition={{ type: 'spring', stiffness: 20, duration: 1 }}
   className="border-b  border-[#e4e4e4] px-10 py-5 flex items-center justify-between"> 
-  <Link href='/' >
+    <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            rotate: 270,
+            opacity: 1
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 10,
+          }}>
         <Image
             src="/images/logo.png"
             alt='Company logo'
@@ -24,11 +37,13 @@ const Header: FC<HeaderProps> = ({}) => {
             height={60}
             
             />
-    </Link>
+    </motion.div>
 
-        <div className='px-8 py-3 text-base text-center border-2 rounded-full font-space'>
+            <Link href='/' >
+        <motion.div variants={itemFade} initial={`hidden`} whileInView={`visible`} className='px-8 py-3 text-base text-center border-2 rounded-full font-space'>
         XEROCODEE
-        </div>
+        </motion.div>
+    </Link>
     
   </motion.div>
 }

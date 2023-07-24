@@ -14,3 +14,11 @@ background-image: linear-gradient(90deg, #ff3bff 0%, #ecbfbf 37%, #5c24ff 66%, #
 .input{
     @apply border-b-4 bg-transparent text-slate-200 border-[#ecbfbf]  focus:border-[#ff3bff]  py-2 px-8 outline-none rounded-2xl focus:bg-slate-950
 }
+
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
