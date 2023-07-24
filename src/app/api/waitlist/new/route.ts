@@ -1,9 +1,9 @@
 import db from '@/utils/db'
-import { NextRequest, NextResponse } from 'next/server'
+
 import { FormValidator } from '@/validations/formValidations'
 import waitlist from '@/models/formModel'
 
-export const POST = async (req: NextRequest, res: NextResponse) => {
+export const POST = async (req: Request, res: Response) => {
 
     try{
         await db();

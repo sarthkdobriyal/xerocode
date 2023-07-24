@@ -7,4 +7,4 @@ export const FormValidator = z.object({
     city: z.string(),
 }).required()
 
-export type FormData = z.infer<typeof formValidator>; 
+export type FormData = z.infer<typeof FormValidator>; 

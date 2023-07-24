@@ -29,10 +29,10 @@ const Hero: FC<HeroProps> = ({}) => {
 
         <Image
           src='/images/hero.png'
+          alt='hero image'
           className="object-contain z-2 absolute"
           width={1200}
           height={1000}
-          alt='hero image'
           />
      </div>
 

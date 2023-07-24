@@ -11,15 +11,14 @@ const connectDB = async () => {
     }
     
     try{
-        await mongoose.connect(process.env.MONGODB_URI, {
-            dbName: 'xerocodee_db',
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+        await mongoose.connect(process.env.MONGODB_URI as string, {
+            dbName: 'xerocodee_db'
+            
         })
         isConnected= true;
         console.log("Mongodb connected")
         
-    }catch(e) {
+    }catch(e: any) {
         console.log("DB error", e.message)
     }
 }

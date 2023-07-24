@@ -18,6 +18,7 @@ const FeatureCards: FC<FeatureCardsProps> = ({top,left, right, bottom, feature1,
       width={25}
       height={25}
       className='object-contain'
+      alt='stack_png'
       />
       <span className='text-xs'>
       {feature1}
@@ -29,6 +30,7 @@ const FeatureCards: FC<FeatureCardsProps> = ({top,left, right, bottom, feature1,
       width={25}
       height={25}
       className='object-contain'
+      alt='stack_png'
       />
       <span className='text-xs'>
       {feature2}
