@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { motion } from 'framer-motion'
-import { itemFade, itemSLide } from '@/variants/textVariants'
-import { visitFunctionBody } from 'typescript'
+import { itemFade } from '@/variants/textVariants'
+
 
 interface HeaderProps {
   

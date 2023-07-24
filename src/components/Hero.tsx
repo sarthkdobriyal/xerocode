@@ -21,12 +21,12 @@ const Hero: FC<HeroProps> = ({}) => {
       
      {/* image */}
      <div   className='w-full  relative flex justify-center py-1 my-1'>
-      <motion.div variant={itemScale} initial='hidden'  whileinView='visible' className='z-1 border absolute top-40 left-24  rounded-full bg-[#8593e8] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></motion.div>
-      <motion.div variant={itemScale} initial='hidden'  whileinView='visible' className='z-1 border absolute top-40 right-24 rounded-full bg-[#fc4ff6] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></motion.div>
+      <motion.div variants={itemScale} initial='hidden'  whileInView='visible' className='z-1 border absolute top-40 left-24  rounded-full bg-[#8593e8] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></motion.div>
+      <motion.div variants={itemScale} initial='hidden'  whileInView='visible' className='z-1 border absolute top-40 right-24 rounded-full bg-[#fc4ff6] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></motion.div>
 
         <motion.div 
           animate={{y: [-10, 20, -10]}}
-          transition={{duration: 2, repeat:'infinity', repeatType: 'reverse', ease: 'easeInOut' }}
+          transition={{duration: 2, repeat:Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
           className='w-full flex justify-center'
         >
 

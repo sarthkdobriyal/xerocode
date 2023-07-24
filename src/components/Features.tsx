@@ -12,8 +12,8 @@ interface FeaturesProps {
 const Features: FC<FeaturesProps> = ({}) => {
   return <div className="mt-80 mb-5 w-full h-screen">
     <div className='font-urbanist flex-col flex justify-center items-center py-2 '>
-        <motion.spa variants={itemFade} initial='hidden' whileInView='visible' className=' text-xl bg-clip-text text-transparent purple_gradient w-[32%] text-center leading-8'>Boost the speed of your development and test cycles. </motion.spa>
-        <motion.spa variants={itemFade} initial='hidden' whileInView='visible' className='leading-6 w-[41%] text-center text-sm'>With AI-driven test case generation and code analysis, problems may be found and fixed more quickly.</motion.spa>
+        <motion.span variants={itemFade} initial='hidden' whileInView='visible' className=' text-xl bg-clip-text text-transparent purple_gradient w-[32%] text-center leading-8'>Boost the speed of your development and test cycles. </motion.span>
+        <motion.span variants={itemFade} initial='hidden' whileInView='visible' className='leading-6 w-[41%] text-center text-sm'>With AI-driven test case generation and code analysis, problems may be found and fixed more quickly.</motion.span>
     </div>
 
     <div className='relative h-[80%]  w-[95%] mx-5 flex justify-center items-center'>

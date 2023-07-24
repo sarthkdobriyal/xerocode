@@ -10,7 +10,7 @@ interface WorkflowsCardProps {
 }
 
 const WorkflowsCard: FC<WorkflowsCardProps> = ({id,title,description,comingSoon}) => {
-  return <motion.div inital={{scale:0, rotate:70}} animate={{scale:1,rotate: 360}} transition={{type: 'spring', stiffness:10, 
+  return <motion.div initial={{scale:0, rotate:70}} animate={{scale:1,rotate: 360}} transition={{type: 'spring', stiffness:10, 
   when: 'beforeChildren',
   staggerChildren: 1,}} className={`${id == 3 ? 'w-[45%]': 'w-[35%]' }  pb-16 bg-[#181924] flex flex-col gap-10 font-urbanist px-5 py-8 rounded-xl`}>
     <div className='flex flex-col gap-2'>
