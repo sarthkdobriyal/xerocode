@@ -1,23 +1,26 @@
 import Image from 'next/image'
 import { FC } from 'react'
+import WaitlistInput from './WaitlistInput'
 
 interface HeroProps {
   
 }
 
 const Hero: FC<HeroProps> = ({}) => {
-  return <div className='flex flex-col p-5 text-center gap-6 items-center  h-full'>
+  return <div className='flex flex-col p-5 text-center gap-8 items-center  h-full'>
 
     <span className='purple_gradient font-open tracking-wider text-4xl bg-clip-text text-transparent'>Integrate AI Throughout Your Workflow</span>
   
      <span className='text-white font-abeezee text-5xl tracking-wider font-normal'>Code Doctor</span>
      <span className='font-open text-sm text-center w-[34%] '>Make processes where AI collaborates with your team throughout the whole development process.</span>
 
-     <div className='p-0.5 purple_gradient rounded-full flex mt-5 w-[25%]' >
+     {/* <div className='p-0.5 purple_gradient rounded-full flex mt-5 w-[25%]' >
         <input type="email" placeholder='Your Email' className=' overflow-hidden border-none outline-none text-sm font-space px-6 rounded-full py-3  h-full w-full bg-black text-slate-200 placeholder:text-gray-700 placeholder:font-extralight pr-24 ' />
         <button className='rounded-full text-xs px-3 my-1 -ml-[29%]
         border border-white bg-transparent hover:bg-slate-900'>Join Waitlist</button>
-     </div>
+     </div> */}
+
+      <WaitlistInput />
       
      {/* image */}
      <div className='w-full  relative flex justify-center py-1 my-1'>
@@ -39,5 +42,3 @@ const Hero: FC<HeroProps> = ({}) => {
 
 export default Hero
 
-
-// #FF3BFF, #ECBFBF, #5C24FF, #D94FD5

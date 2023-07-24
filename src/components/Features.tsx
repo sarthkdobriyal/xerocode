@@ -35,20 +35,56 @@ const Features: FC<FeaturesProps> = ({}) => {
     </linearGradient>
   </defs>
     </svg>
+    
+    <div className='bg-[#181924] absolute top-10 left-32 rounded-xl flex flex-col px-5 w-[25%] fonr-urbanist text-sm font-light'>        
+        <div className='border-b border-slate-600 border-opacity-30 py-3 flex gap-2'>
+            <Image 
+            src='/images/duotone-stack.svg'
+            width={25}
+            height={25}
+            className='object-contain'
+            />
+            <span className='text-xs'>
+            CI/CD Pipeline Generate
+            </span>
+        </div>
+        <div className='py-3 flex gap-2'>
+            <Image 
+            src='/images/duotone-stack_blue.svg'
+            width={25}
+            height={25}
+            className='object-contain'
+            />
+            <span className='text-xs'>
+            Build / Deploymnent
+            </span>
+        </div>
+    </div> 
+    <div className='bg-[#181924] absolute bottom-10 right-32 rounded-xl flex flex-col px-5 w-[25%] fonr-urbanist text-sm font-light'>        
+        <div className='border-b border-slate-600 border-opacity-30 py-3 flex gap-2'>
+            <Image 
+            src='/images/duotone-stack.svg'
+            width={25}
+            height={25}
+            className='object-contain'
+            />
+            <span className='text-xs'>
+            Generate Test Cases
+            </span>
+        </div>
+        <div className='py-3 flex gap-2'>
+            <Image 
+            src='/images/duotone-stack_blue.svg'
+            width={25}
+            height={25}
+            className='object-contain'
+            />
+            <span className='text-xs'>
+            Code Analysis
+            </span>
+        </div>
+    </div> 
 
-    <FeatureCards
-        feature1='CI/CD Pipeline Generate'
-        feature2='Build / Deploymnent'
-        top={10}
-        left={32}
-    />
-
-  <FeatureCards
-        feature1='Generate Test Cases'
-        feature2='Code Analysis'
-        bottom={10}
-        right={32}
-    />
     
     </div>
   </div>
