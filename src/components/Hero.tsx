@@ -6,10 +6,10 @@ interface HeroProps {
 }
 
 const Hero: FC<HeroProps> = ({}) => {
-  return <div className='flex flex-col p-5 text-center gap-8 items-center'>
-    <div className="flex justify-center font-open">
-    <span className='purple_gradient tracking-wider text-4xl bg-clip-text text-transparent'>Integrate AI Throughout Your Workflow</span>
-    </div>
+  return <div className='flex flex-col p-5 text-center gap-6 items-center  h-full'>
+
+    <span className='purple_gradient font-open tracking-wider text-4xl bg-clip-text text-transparent'>Integrate AI Throughout Your Workflow</span>
+  
      <span className='text-white font-abeezee text-5xl tracking-wider font-normal'>Code Doctor</span>
      <span className='font-open text-sm text-center w-[34%] '>Make processes where AI collaborates with your team throughout the whole development process.</span>
 
@@ -18,22 +18,19 @@ const Hero: FC<HeroProps> = ({}) => {
         <button className='rounded-full text-xs px-3 my-1 -ml-[29%]
         border border-white bg-transparent hover:bg-slate-900'>Join Waitlist</button>
      </div>
-
+      
      {/* image */}
-     <div className='w-full  relative flex justify-center py-1'>
+     <div className='w-full  relative flex justify-center py-1 my-1'>
       <div className='z-1 border absolute top-40 left-24  rounded-full bg-[#8593e8] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></div>
       <div className='z-1 border absolute top-40 right-24 rounded-full bg-[#fc4ff6] blur-2xl w-[24rem] h-[24rem] opacity-[0.2]' ></div>
 
         <Image
           src='/images/hero.png'
-          className="object-contain z-2"
+          className="object-contain z-2 absolute"
           width={1200}
           height={1000}
           alt='hero image'
           />
-        
-
-
      </div>
 
 
