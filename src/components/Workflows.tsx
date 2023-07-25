@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import WorkflowsCard from './WorkflowsCard'
-import { motion } from 'framer-motion'
 
 interface WorkflowsProps {
   

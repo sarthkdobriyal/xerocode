@@ -5,7 +5,7 @@ import { z } from 'zod'
 import {set, useForm} from 'react-hook-form'
 import { FormData , FormValidator } from '@/validations/formValidations'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { itemScale, itemSlide } from '@/variants/textVariants'
 
 interface FormComponentProps {
@@ -45,15 +45,15 @@ const FormComponent: FC<FormComponentProps> = ({}) => {
       
   {showSuccess && <p className='m-3 text-lg  text-green-400 font-bold animate-bounce duration-700 tracking-widest' >Form has been submitted</p>}
 
-    <motion.input variants={itemScale} initial='hidden' whileInView='visible' type="text"  {...register('name')} className='input'  placeholder='Enter your name'/>
-    <p className='m-2 tracking-wide text-base font-baloo font-semibold text-red-800'>{errors.name?.message}</p>
-    <motion.input variants={itemScale} initial='hidden' whileInView='visible' type="email" {...register('email')} className='input'  placeholder='Enter your email'/>
-    <p className='m-2 tracking-wide text-base font-baloo font-semibold text-red-800'>{errors.email?.message}</p>
-    <motion.input variants={itemScale} initial='hidden' whileInView='visible' type="number" {...register('phone')}  className='input'  placeholder='Enter your phone number'/>
-    <p className='m-2 tracking-wide text-base font-baloo font-semibold text-red-800'>{errors.phone?.message}</p>
-    <motion.input variants={itemScale} initial='hidden' whileInView='visible' type="text" {...register('city')} className='input'  placeholder='Enter your city'/>
-    <p className='m-2 tracking-wide text-base font-baloo font-semibold text-red-800'>{errors.city?.message}</p>
-    <motion.button variants={itemSlide} initial='hidden' whileInView='visible' className=' mx-auto border rounded-full bg-[#5c24ff] px-4 py-2 text-xl hover:bg-[#3a19a7] active:translate-y-2 transition-all duration-75 '>Submit</motion.button>
+    <m.input variants={itemScale} initial='hidden' whileInView='visible' type="text"  {...register('name')} className='input'  placeholder='Enter your name'/>
+    <p className='m-2 tracking-wide text-base  font-semibold text-red-800'>{errors.name?.message}</p>
+    <m.input variants={itemScale} initial='hidden' whileInView='visible' type="email" {...register('email')} className='input'  placeholder='Enter your email'/>
+    <p className='m-2 tracking-wide text-base  font-semibold text-red-800'>{errors.email?.message}</p>
+    <m.input variants={itemScale} initial='hidden' whileInView='visible' type="number" {...register('phone')}  className='input'  placeholder='Enter your phone number'/>
+    <p className='m-2 tracking-wide text-base  font-semibold text-red-800'>{errors.phone?.message}</p>
+    <m.input variants={itemScale} initial='hidden' whileInView='visible' type="text" {...register('city')} className='input'  placeholder='Enter your city'/>
+    <p className='m-2 tracking-wide text-base  font-semibold text-red-800'>{errors.city?.message}</p>
+    <m.button variants={itemSlide} initial='hidden' whileInView='visible' className=' mx-auto border rounded-full bg-[#5c24ff] px-4 py-2 text-xl hover:bg-[#3a19a7] active:translate-y-2 transition-all duration-75 '>Submit</m.button>
     </form>
 }
 

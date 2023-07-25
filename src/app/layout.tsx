@@ -1,6 +1,9 @@
+
 import './globals.css'
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+
+
 
 
 
@@ -20,9 +23,12 @@ export default function RootLayout({
         <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
       </head>
       <body className='text-white bg-black .box-border'>
+        
+
         <Header />
         {children}
         </body>
+  
     </html>
   )
 }

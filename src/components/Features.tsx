@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
 import { FC } from 'react'
-import FeatureCards from './FeatureCards'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { itemFade, itemScale, itemSlide } from '@/variants/textVariants'
+import { urbanist } from './fonts'
 
 interface FeaturesProps {
   
@@ -11,9 +11,9 @@ interface FeaturesProps {
 
 const Features: FC<FeaturesProps> = ({}) => {
   return <div className="mt-80 mb-5 w-full h-screen">
-    <div className='font-urbanist flex-col flex justify-center items-center py-2 '>
-        <motion.span variants={itemFade} initial='hidden' whileInView='visible' className=' text-xl bg-clip-text text-transparent purple_gradient w-[32%] text-center leading-8'>Boost the speed of your development and test cycles. </motion.span>
-        <motion.span variants={itemFade} initial='hidden' whileInView='visible' className='leading-6 w-[41%] text-center text-sm'>With AI-driven test case generation and code analysis, problems may be found and fixed more quickly.</motion.span>
+    <div className={`${urbanist.variable} flex-col flex justify-center items-center py-2 `}>
+        <m.span variants={itemFade} initial='hidden' whileInView='visible' className=' text-xl bg-clip-text text-transparent purple_gradient w-[32%] text-center leading-8'>Boost the speed of your development and test cycles. </m.span>
+        <m.span variants={itemFade} initial='hidden' whileInView='visible' className='leading-6 w-[41%] text-center text-sm'>With AI-driven test case generation and code analysis, problems may be found and fixed more quickly.</m.span>
     </div>
 
     <div className='relative h-[80%]  w-[95%] mx-5 flex justify-center items-center'>
@@ -39,7 +39,7 @@ const Features: FC<FeaturesProps> = ({}) => {
   </defs>
     </svg>
     
-    <div className='bg-[#181924] absolute top-10 left-32 rounded-xl flex flex-col px-5 w-[25%] fonr-urbanist text-sm font-light'>        
+    <div className={`bg-[#181924] absolute top-10 left-32 rounded-xl flex flex-col px-5 w-[25%] ${urbanist.variable} font-urbanist text-sm font-light`}>        
         <div className='border-b border-slate-600 border-opacity-30 py-3 flex gap-2'>
             <Image 
             src='/images/duotone-stack.svg'
@@ -65,7 +65,7 @@ const Features: FC<FeaturesProps> = ({}) => {
             </span>
         </div>
     </div> 
-    <div className='bg-[#181924] absolute bottom-10 right-32 rounded-xl flex flex-col px-5 w-[25%] fonr-urbanist text-sm font-light'>        
+    <div className={`bg-[#181924] absolute bottom-10 right-32 rounded-xl flex flex-col px-5 w-[25%] ${urbanist.variable} font-urbanist text-sm font-light`}>        
         <div className='border-b border-slate-600 border-opacity-30 py-3 flex gap-2'>
             <Image 
             src='/images/duotone-stack.svg'
