@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-import { m } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { itemFade } from '@/variants/textVariants'
 import { spaceGrotesk } from './fonts'
 
@@ -12,13 +12,13 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({}) => {
-  return <m.div 
+  return <motion.div 
             
   initial={{  x: -100, opacity: 0 }}
   animate={{x: 0, opacity: 1 }}
   transition={{ type: 'spring', stiffness: 20, duration: 1 }}
   className="border-b  border-[#e4e4e4] px-10 py-5 flex items-center justify-between"> 
-    <m.div
+    <motion.div
           initial={{
             opacity: 0,
           }}
@@ -38,15 +38,15 @@ const Header: FC<HeaderProps> = ({}) => {
             height={60}
             
             />
-    </m.div>
+    </motion.div>
 
             <Link href='/' >
-        <m.div variants={itemFade} initial={`hidden`} whileInView={`visible`} className={`px-8 py-3 text-base text-center border-2 rounded-full ${spaceGrotesk.variable} font-space`}>
+        <motion.div variants={itemFade} initial={`hidden`} whileInView={`visible`} className={`px-8 py-3 text-base text-center border-2 rounded-full ${spaceGrotesk.variable} font-space`}>
         XEROCODEE
-        </m.div>
+        </motion.div>
     </Link>
     
-  </m.div>
+  </motion.div>
 }
 
 export default Header
