@@ -1,7 +1,8 @@
-
+'use client'
 import './globals.css'
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+import  LazyMotionComponent  from '@/components/LazyMotionComponent'
 
 
 
@@ -24,9 +25,10 @@ export default function RootLayout({
       </head>
       <body className='text-white bg-black .box-border'>
         
-
+      <LazyMotionComponent>
         <Header />
         {children}
+      </LazyMotionComponent>
         </body>
   
     </html>
