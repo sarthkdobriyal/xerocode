@@ -1,17 +1,9 @@
 'use client'
 import './globals.css'
-import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import  LazyMotionComponent  from '@/components/LazyMotionComponent'
 
 
-
-
-
-export const metadata: Metadata = {
-  title: 'XeroCode',
-  description: 'AI Code Pilot',
-}
 
 export default function RootLayout({
   children,
